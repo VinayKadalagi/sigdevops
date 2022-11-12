@@ -19,7 +19,7 @@ As a result of the task, provide us an archive with the deployment script (calle
 # Solution:
 
 ### app1: 
-Application 1 is a dockerized python application which exposes the JSON document as { "id": "1", "message": "Hello world" }
+Application 1 is a dockerized python application which exposes the JSON document as `{ "id": "1", "message": "Hello world" }`
 ```
 ├── Dockerfile
 ├── api
