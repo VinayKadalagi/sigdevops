@@ -2,7 +2,7 @@
 
 Implement a piece of software exposing a JSON document:
 
-{ "id": "1", "message": "Hello world" } ... when visited with a HTTP client
+`{ "id": "1", "message": "Hello world" }` ... when visited with a HTTP client
 
 Dockerize the application
 
@@ -23,13 +23,9 @@ Application 1 is a dockerized python application which exposes the JSON document
 ```
 ├── Dockerfile
 ├── api
-<<<<<<< HEAD
 │   ├── __init__.py
+│   ├── data.json
 │   └── requirements.txt
-=======
-│   ├── __init__.py
-│   └── requirements.txt
->>>>>>> a50f8ff (updates)
 └── app1-microservice.yaml
 ```
 
@@ -44,21 +40,12 @@ Application 2 is a dockerized python application consumes application using requ
 ```
 ├── Dockerfile
 ├── api
-<<<<<<< HEAD
 │   ├── __init__.py
 │   └── requirements.txt
-=======
-│   ├── __init__.py
-│   └── requirements.txt
->>>>>>> a50f8ff (updates)
 └── app2-microservice.yaml
 ```
 
 - Dockerfile: Pulls python3.7 alpine image, sets the flask environment variables, installs python dependencies, expose 5000 port and execute `flask run` command.
 - app2-microservice.yaml: Kubernetes manifest file containing deployment and service specification.
 - __init__.py: flask api application which calls application 1 and reverses the json message received and displays another json rendered dynamically. Something like `{"id":"1","message":"dlrow olleH"}`
-<<<<<<< HEAD
 - requirements.txt: Python dependencies requirement file.
-=======
-- requirements.txt: Python dependencies requirement file.
->>>>>>> a50f8ff (updates)
